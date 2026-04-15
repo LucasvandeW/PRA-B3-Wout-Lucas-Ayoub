@@ -4,7 +4,7 @@ session_start();
 if (!isset($_SESSION['user_id'])) {
     header("location: ../login.php");
 }
-
+$userID = $_SESSION['user_id'];
 require_once __DIR__ . '/../backend/conn.php';
 require_once __DIR__ . '/../backend/config.php';
 ?>
@@ -21,7 +21,7 @@ require_once __DIR__ . '/../backend/config.php';
     <a href="index.php">Terug naar homepagina &gt;</a>
 
     <?php
-    //$query = "SELECT titel, afdeling, status, deadline FROM taken WHERE user = user_id"; (wordt nog gemaakt)
+    $query = "SELECT titel, beschrijving, afdeling, deadline, status FROM taken WHERE user = $userID";
     $statement = $conn->prepare($query);
     $statement->execute();
 
