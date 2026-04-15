@@ -20,11 +20,11 @@ require_once __DIR__ . '/../backend/config.php';
 
 <div class="container">
     <h1>categories</h1>
-    
-     <button><a href="index.php">Terug naar home &gt;</a></button>
+    <img src="../img/logo-big-fill-only.png" alt="Developerland logo" class="logo">
+    <button><a href="index.php">Terug naar home &gt;</a></button>
 
     <form action="../backend/caterogiesController.php" method="post">
-        
+
         <div class="form-group">
             <label for="afdeling">Kies een afdeling</label>
             <select name="afdeling" id="afdeling" class="form-input">
@@ -35,13 +35,13 @@ require_once __DIR__ . '/../backend/config.php';
                 <option value="inkoop">inkoop</option>
                 <option value="klantenservice">klantenservice</option>
                 <option value="groen">groen</option>
-        
 
-       
 
-       
-           
-            <input type="submit" name="bekijk" id="bekijk" value="bekijk" class="btn btn-primary"> 
+
+
+
+
+                <input type="submit" name="bekijk" id="bekijk" value="bekijk" class="btn btn-primary">
         </div>
     </form>
 
@@ -49,38 +49,38 @@ require_once __DIR__ . '/../backend/config.php';
 
 
 
-<?php
+    <?php
 
-$taken = $_SESSION['gefilterd'] ?? [];
-?>
+    $taken = $_SESSION['gefilterd'] ?? [];
+    ?>
 
 
 
-<?php if (empty($taken)): ?>
-    <p>Er zijn geen taken gevonden voor deze afdeling.</p>
-<?php else: ?>
-     
-         <table>
-         <tr>
-        <th>Titel</th>
-        <th>Beschrijving</th>
-        <th>Status</th>
-        <th>Deadline</th>
-    </tr>
+    <?php if (empty($taken)): ?>
+        <p>Er zijn geen taken gevonden voor deze afdeling.</p>
+    <?php else: ?>
 
-    <?php foreach ($taken as $t): ?>
-        <tr>
-            <td><?= $t['titel'] ?></td>
-            <td><?= $t['beschrijving'] ?></td>
-            <td><?= $t['status'] ?></td>
-            <td><?= $t['deadline'] ?></td>
-        </tr>
-    <?php endforeach; ?>
-</table>
+        <table>
+            <tr>
+                <th>Titel</th>
+                <th>Beschrijving</th>
+                <th>Status</th>
+                <th>Deadline</th>
+            </tr>
 
-    
- 
-<?php endif; ?>
+            <?php foreach ($taken as $t): ?>
+                <tr>
+                    <td><?= $t['titel'] ?></td>
+                    <td><?= $t['beschrijving'] ?></td>
+                    <td><?= $t['status'] ?></td>
+                    <td><?= $t['deadline'] ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
 
-  
+
+
+    <?php endif; ?>
+
+
 </html>

@@ -18,6 +18,7 @@ require_once __DIR__ . '/../backend/config.php';
 
 <body>
     <h1>Mijn taken</h1>
+    <img src="../img/logo-big-fill-only.png" alt="Developerland logo" class="logo">
     <button><a href="index.php">Terug naar home &gt;</a></button>
 
     <?php
