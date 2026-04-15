@@ -18,7 +18,7 @@ require_once __DIR__ . '/../backend/config.php';
 
 <body>
     <h1>Mijn taken</h1>
-    <a href="index.php">Terug naar homepagina &gt;</a>
+    <button><a href="index.php">Terug naar home &gt;</a></button>
 
     <?php
     $query = "SELECT titel, beschrijving, afdeling, deadline, status FROM taken WHERE user = $userID";

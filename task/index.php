@@ -24,6 +24,7 @@ require_once __DIR__ . '/../backend/config.php';
     <button><a href="create.php">Taak aanmaken &gt;</a></button>
     <button><a href="done.php">Uitgevoerde taken &gt;</a></button>
     <button><a href="mytasks.php">Bekijk mijn taken &gt;</a></button>
+      <button><a href="categories.php">Bekijk taken per afdeling &gt;</a></button>
 
     <?php if (isset($_GET['msg'])) {
         echo "<div class='msg'>" . $_GET['msg'] . "</div>";
