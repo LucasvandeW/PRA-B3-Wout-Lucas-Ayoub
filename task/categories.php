@@ -20,7 +20,7 @@ require_once __DIR__ . '/../backend/config.php';
 
 <div class="container">
     <h1>categories</h1>
-    <img src="../img/logo-big-fill-only.png" alt="Developerland logo" class="logo">
+    
     <button><a href="index.php">Terug naar home &gt;</a></button>
 
     <form action="../backend/caterogiesController.php" method="post">

@@ -7,14 +7,16 @@ if (!isset($_SESSION['user_id'])) {
 
 require_once __DIR__ . '/../backend/conn.php';
 require_once __DIR__ . '/../backend/config.php';
+
 ?>
 <!doctype html>
 <html lang="nl">
 
 <head>
+   
     <title>Developerland takenlijst</title>
     <?php require_once __DIR__ . '/../head.php'; ?>
-        <img src="../img/logo-big-fill-only.png" alt="Developerland logo" class="logo">
+        
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 

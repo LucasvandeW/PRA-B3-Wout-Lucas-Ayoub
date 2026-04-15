@@ -26,7 +26,7 @@ if (!isset($_SESSION['user_id'])) {
     ?>
     <?php
     // require_once '../header.php'; ?>
-    <img src="../img/logo-big-fill-only.png" alt="Developerland logo" class="logo">
+   
     <div class="container">
         <h1>Verwijderen</h1>
 
