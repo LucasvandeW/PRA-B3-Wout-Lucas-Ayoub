@@ -1,9 +1,5 @@
 <?php
-session_start();
 
-if (!isset($_SESSION['user_id'])) {
-    header("location: ../login.php");
-}
 require_once __DIR__ . '/../resources/views/components/header.php';
 require_once __DIR__ . '/../backend/conn.php';
 require_once __DIR__ . '/../backend/config.php';
@@ -21,13 +17,9 @@ require_once __DIR__ . '/../backend/config.php';
 </head>
 
 <body>
-
-    <h1>Taaklijst</h1>
-    <button><a href="../index.php">Terug naar home &gt;</a></button>
-    <button><a href="create.php">Taak aanmaken &gt;</a></button>
-    <button><a href="done.php">Uitgevoerde taken &gt;</a></button>
-    <button><a href="mytasks.php">Bekijk mijn taken &gt;</a></button>
-      <button><a href="categories.php">Bekijk taken per afdeling &gt;</a></button>
+<div class="container">
+    <h1>Takenlijst</h1>
+   
 
     <?php if (isset($_GET['msg'])) {
         echo "<div class='msg'>" . $_GET['msg'] . "</div>";
@@ -50,7 +42,7 @@ require_once __DIR__ . '/../backend/config.php';
             <th>status</th>
             <th>deadline</th>
             <th>aanpassen</th>
-            <th>verwijderen</th>
+            
         </tr>
 
         <?php foreach ($kaarten as $kaart): ?>
@@ -62,12 +54,13 @@ require_once __DIR__ . '/../backend/config.php';
 
 
                 <td><a href="edit.php?id=<?php echo $kaart['id']; ?>"> <button><i class="fa-solid fa-pen"></i></button></a>
-                </td>
-                <td><a href="delete.php?id=<?php echo $kaart['id']; ?>"> <button><i
+                 <a href="delete.php?id=<?php echo $kaart['id']; ?>"> <button><i
                                 class="fa-solid fa-trash"></i></button></a></td>
+          
             </tr>
         <?php endforeach; ?>
     </table>
+    </div>
 </body>
 
 </html>

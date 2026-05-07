@@ -1,10 +1,6 @@
 <?php
-session_start();
 
-if (!isset($_SESSION['user_id'])) {
-    header("location: ../login.php");
-}
-
+require_once __DIR__ . '/../resources/views/components/header.php';
 require_once __DIR__ . '/../backend/conn.php';
 require_once __DIR__ . '/../backend/config.php';
 ?>

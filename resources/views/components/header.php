@@ -1,4 +1,9 @@
-<?php #WORK IN PROGRESS ?>
+<?php 
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header("location: ../login.php");
+} ?>
 <head>
     <link rel="stylesheet" href="../css/header.css">
 </head>   
@@ -10,11 +15,13 @@
 
 
         <div class="nav-buttons">
-            <button><a href="../index.php">Terug naar home &gt;</a></button>
-             <button><a href="create.php">Taak aanmaken &gt;</a></button>
-             <button><a href="done.php">Uitgevoerde taken &gt;</a></button>
-             <button><a href="mytasks.php">Bekijk mijn taken &gt;</a></button>
-            <button><a href="categories.php">Bekijk taken per afdeling &gt;</a></button>
+           
+
+         <a href="../task/index.php" class="btn">Terug naar home </a>
+         <a href="create.php" class="btn">Taak aanmaken </a>
+         <a href="done.php" class="btn">Uitgevoerde taken </a>
+         <a href="mytasks.php" class="btn">Bekijk mijn taken </a>
+         <a href="categories.php" class="btn">Bekijk taken per afdeling &gt;</a>
 
         </div>
         

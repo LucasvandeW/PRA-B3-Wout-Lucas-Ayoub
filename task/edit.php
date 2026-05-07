@@ -1,11 +1,5 @@
-<?php
-session_start();
-
-if (!isset($_SESSION['user_id'])) {
-    header("location: ../login.php");
-}
-
-
+<?php 
+require_once __DIR__ . '/../resources/views/components/header.php';
 ?>
 
 <!doctype html>
