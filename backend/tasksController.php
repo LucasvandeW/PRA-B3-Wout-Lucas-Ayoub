@@ -18,13 +18,14 @@ require_once 'conn.php';
 
 if ($action == "create") {
     $query = "INSERT INTO taken (titel, beschrijving, afdeling, deadline) 
- VALUES(:titel, :beschrijving, :afdeling, :deadline )";
+ VALUES(:titel, :beschrijving, :afdeling, :deadline)";
 
     $data = [
         ":titel" => $titel,
         ":beschrijving" => $beschrijving,
         ":afdeling" => $afdeling,
-        ":deadline" => $deadline
+        ":deadline" => $deadline,
+       
     ];
 }
 
@@ -65,7 +66,7 @@ if ($action == "update" || $action == "delete") {
 $statement->execute($data);
 
 $items = $statement->fetchAll(PDO::FETCH_ASSOC);
-header("Location: ../task/index.php?msg=Melding opgeslagen");
+header("Location: ../task/index.php?msg=Verwerkt");
 
 
 

@@ -21,7 +21,8 @@ if (!isset($_SESSION['user_id'])) {
          <a href="create.php" class="btn">Taak aanmaken </a>
          <a href="done.php" class="btn">Uitgevoerde taken </a>
          <a href="mytasks.php" class="btn">Bekijk mijn taken </a>
-         <a href="categories.php" class="btn">Bekijk taken per afdeling &gt;</a>
+         <a href="categories.php" class="btn">Bekijk taken per afdeling</a>
+         <a href="../logout.php" class="btn">uitloggen</a>
 
         </div>
         

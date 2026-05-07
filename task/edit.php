@@ -101,7 +101,9 @@ require_once __DIR__ . '/../resources/views/components/header.php';
                 <label for="deadline">Deadline</label>
                 <input type="date" name="deadline" id="deadline" class="form-input"
                     value="<?php echo ($melding['deadline']); ?>">
-                <input type="submit" value="Opslaan">
+                     </div>
+                     <div class="form-group"><input type="submit" value="Opslaan"></div>
+                
         </form>
 
     </div>

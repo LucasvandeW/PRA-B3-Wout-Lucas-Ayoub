@@ -136,7 +136,9 @@ label {
 
 table {
   border-collapse: collapse;
-  width: 81%;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-input {

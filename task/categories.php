@@ -17,7 +17,7 @@ require_once __DIR__ . '/../backend/config.php';
 <div class="container">
     <h1>categories</h1>
     
-    <button><a href="index.php">Terug naar home &gt;</a></button>
+    
 
     <form action="../backend/caterogiesController.php" method="post">
 

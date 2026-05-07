@@ -13,9 +13,10 @@ require_once __DIR__ . '/../backend/config.php';
 </head>
 
 <body>
+    <div class="container">
     <h1>Mijn taken</h1>
    
-    <button><a href="index.php">Terug naar home &gt;</a></button>
+    
 
     <?php
     $query = "SELECT titel, beschrijving, afdeling, deadline, status FROM taken WHERE user = $userID";
@@ -44,7 +45,7 @@ require_once __DIR__ . '/../backend/config.php';
             </tr>
         <?php endforeach; ?>
     </table>
-
+</div>
 </body>
 
 </html>

@@ -12,9 +12,10 @@ require_once __DIR__ . '/../backend/config.php';
 </head>
 
 <body>
+    <div class="container">
     <h1>Uitgevoerde Taken</h1>
        
-    <button><a href="index.php">Terug naar homepagina &gt;</a></button>
+   
 
     <?php
     $query = "SELECT titel, afdeling, status, deadline FROM taken WHERE status = 'done' ORDER BY deadline DESC";
@@ -41,7 +42,7 @@ require_once __DIR__ . '/../backend/config.php';
             </tr>
         <?php endforeach; ?>
     </table>
-
+</div>
 </body>
 
 </html>

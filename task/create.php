@@ -2,6 +2,7 @@
 require_once __DIR__ . '/../resources/views/components/header.php';
 require_once __DIR__ . '/../backend/conn.php';
 require_once __DIR__ . '/../backend/config.php';
+$userID = $_SESSION['user_id'];
 ?>
 <!doctype html>
 <html lang="nl">
@@ -36,6 +37,7 @@ require_once __DIR__ . '/../backend/config.php';
                 <option value="inkoop">inkoop</option>
                 <option value="klantenservice">klantenservice</option>
                 <option value="groen">groen</option>
+                </select>
         </div>
 
         <div class="form-group">
@@ -45,11 +47,13 @@ require_once __DIR__ . '/../backend/config.php';
 
         <input type="hidden" name="action" value="create">
         <input type="hidden" name="id">
+       
+        <input type="hidden" name="user" value="<?= $userID ?>">
+
 
         <div class="form-group">
             <label for="verzend"></label>
-            <input type="submit" name="verzend" id="verzend" value="verzend" class="btn btn-primary"> <button><a
-                    href="index.php">Terug naar takenlijst &gt;</a></button>
+            <input type="submit" name="verzend" id="verzend" value="verzend" class="btn btn-primary"> 
         </div>
     </form>
 
